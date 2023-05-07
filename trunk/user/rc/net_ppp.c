@@ -571,6 +571,10 @@ ipv6up_main(int argc, char **argv)
 	char *ppp_linkname = safe_getenv("LINKNAME");
 
 	ppp_idx = ppp_ifindex(ppp_ifname);
+	
+	if (ppp_idx > 0 && ppp_idx < VPNC_PPP_UNIT)
+		return -1;
+	
 	if (!is_valid_wan_ppp_idx(ppp_idx))
 		return -1;
 
@@ -596,6 +600,10 @@ ipv6down_main(int argc, char **argv)
 	char *ppp_linkname = safe_getenv("LINKNAME");
 
 	ppp_idx = ppp_ifindex(ppp_ifname);
+	
+	if (ppp_idx > 0 && ppp_idx < VPNC_PPP_UNIT)
+		return -1;
+	
 	if (!is_valid_wan_ppp_idx(ppp_idx))
 		return -1;
 
