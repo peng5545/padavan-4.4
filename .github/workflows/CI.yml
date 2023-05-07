@@ -24,7 +24,7 @@ jobs:
           - build_variant: "mt7621"
             targets: "K2P_nano"
           - build_variant: "mt7621-usb-1"
-            targets: "XY-C1"
+            targets: "NEWIFI3"
           - build_variant: "mt7621-usb-2"
             targets: "R2100"
     steps:
