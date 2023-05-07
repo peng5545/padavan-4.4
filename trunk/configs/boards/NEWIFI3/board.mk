@@ -5,5 +5,5 @@
 ##################################################################
 
 CFLAGS += -DBOARD_NEWIFI3
-BOARD_NUM_USB_PORTS=0
+BOARD_NUM_USB_PORTS=1
 CONFIG_BOARD_RAM_SIZE=512
